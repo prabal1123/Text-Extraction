@@ -1,0 +1,9 @@
+# Team layouts use spatial coordinate parsing, so columns are conceptual anchors
+columns:
+  rank: ["Rank"]
+  bib: ["Start No."]
+  name: ["Name"]
+  dob: ["DOB"]
+  team: ["Team"]
+  time: ["Time"]
+  speed: ["Speed"]

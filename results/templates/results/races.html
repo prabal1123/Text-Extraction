@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Races Directory - Track Cycling Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --surface-color: #ffffff;
+            --surface-border: #e2e8f0;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --accent-gold: #d97706;
+            --badge-bg: #f1f5f9;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1350px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--surface-border);
+            padding-bottom: 20px;
+        }
+
+        .brand h1 { font-size: 24px; font-weight: 700; color: var(--text-main); }
+        .brand p { font-size: 14px; color: var(--text-muted); margin-top: 4px; }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-nav {
+            background-color: var(--surface-color);
+            border: 1px solid var(--surface-border);
+            color: var(--text-main);
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+        }
+
+        .btn-nav:hover { background-color: var(--primary); border-color: var(--primary); color: white; }
+
+        .controls-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--surface-border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 2fr 2fr 120px;
+            gap: 16px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) { form { grid-template-columns: 1fr; } }
+
+        select {
+            width: 100%; background-color: #fafafa; border: 1px solid var(--surface-border);
+            color: var(--text-main); padding: 10px 14px; border-radius: 8px; font-size: 13px; outline: none;
+        }
+
+        button[type="submit"] {
+            background-color: var(--primary); color: white; border: none; padding: 11px 20px;
+            border-radius: 8px; font-weight: 600; font-size: 13px; cursor: pointer; width: 100%;
+        }
+        button[type="submit"]:hover { background-color: var(--primary-hover); }
+
+        .table-container {
+            background-color: var(--surface-color); border: 1px solid var(--surface-border);
+            border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+        th { background-color: #f8fafc; color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 11px; padding: 14px 20px; border-bottom: 1px solid var(--surface-border); }
+        td { padding: 14px 20px; border-bottom: 1px solid var(--surface-border); color: var(--text-main); }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background-color: #fcfcfc; }
+
+        .badge {
+            display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; background-color: var(--badge-bg);
+        }
+        .badge-layout { background-color: rgba(79, 70, 229, 0.1); color: var(--primary); border: 1px solid rgba(79, 70, 229, 0.2); }
+        .empty-state { text-align: center; padding: 48px; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <h1>Uploaded Races Directory</h1>
+                <p>Complete inventory of ingested communiques and race schedules</p>
+            </div>
+            <div class="nav-links">
+                <a href="{% url 'browse_results' %}" class="btn-nav">&larr; Back to Results</a>
+                <a href="{% url 'upload_pdf' %}" class="btn-nav">+ Upload New PDF</a>
+            </div>
+        </header>
+
+        <div class="controls-card">
+            <form method="get">
+                <select name="champ">
+                    <option value="">All Championships</option>
+                    {% for c in championships %}
+                        <option value="{{ c.id }}" {% if selected_champ == c.id|stringformat:"s" %}selected{% endif %}>{{ c.edition }}th Championship ({{ c.year }})</option>
+                    {% endfor %}
+                </select>
+
+                <select name="layout">
+                    <option value="">All Layout Families</option>
+                    <option value="timed" {% if selected_layout == 'timed' %}selected{% endif %}>Timed</option>
+                    <option value="placing" {% if selected_layout == 'placing' %}selected{% endif %}>Placing</option>
+                    <option value="team" {% if selected_layout == 'team' %}selected{% endif %}>Team</option>
+                    <option value="points" {% if selected_layout == 'points' %}selected{% endif %}>Points</option>
+                    <option value="unknown" {% if selected_layout == 'unknown' %}selected{% endif %}>Unknown</option>
+                </select>
+
+                <button type="submit">Filter Races</button>
+            </form>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Edition</th>
+                        <th>Communique No.</th>
+                        <th>Page Range</th>
+                        <th>Layout Family</th>
+                        <th>Category</th>
+                        <th>Race Type</th>
+                        <th>Gender</th>
+                        <th>Extracted Results</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for race in races %}
+                    <tr>
+                        <td><span style="font-weight: 600;">{{ race.communique.championship.edition }}th</span></td>
+                        <td><strong>Comm. {{ race.communique.number|default:"N/A" }}</strong></td>
+                        <td style="color: var(--text-muted);">{{ race.communique.page_range }}</td>
+                        <td><span class="badge badge-layout">{{ race.layout_family|upper }}</span></td>
+                        <td>{{ race.category }}</td>
+                        <td style="font-weight: 500;">{{ race.race_type }}</td>
+                        <td style="color: var(--text-muted);">{{ race.gender }}</td>
+                        <td><strong>{{ race.results.count }}</strong> records</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="8" class="empty-state">No races found matching your filter.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

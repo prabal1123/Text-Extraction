@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Cycling Results Intelligence Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --surface-color: #ffffff;
+            --surface-border: #e2e8f0;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --accent-gold: #d97706;
+            --badge-bg: #f1f5f9;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1350px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--surface-border);
+            padding-bottom: 20px;
+        }
+
+        .brand h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: var(--text-main);
+        }
+
+        .brand p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-nav {
+            background-color: var(--surface-color);
+            border: 1px solid var(--surface-border);
+            color: var(--text-main);
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+        }
+
+        .btn-nav:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .controls-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--surface-border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 120px auto;
+            gap: 12px;
+            align-items: center;
+        }
+
+        @media (max-width: 1100px) {
+            form { grid-template-columns: 1fr 1fr; }
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            background-color: #fafafa;
+            border: 1px solid var(--surface-border);
+            color: var(--text-main);
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus, select:focus {
+            border-color: var(--primary);
+            background-color: #fff;
+        }
+
+        button[type="submit"] {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover { background-color: var(--primary-hover); }
+
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .export-group { display: flex; gap: 10px; }
+
+        .btn-export {
+            background-color: var(--surface-color);
+            border: 1px solid var(--surface-border);
+            color: var(--text-main);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+            transition: all 0.2s;
+        }
+
+        .btn-export:hover { background-color: #f8fafc; border-color: var(--text-muted); }
+
+        .table-container {
+            background-color: var(--surface-color);
+            border: 1px solid var(--surface-border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+        th { background-color: #f8fafc; color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 11px; padding: 14px 20px; border-bottom: 1px solid var(--surface-border); }
+        td { padding: 14px 20px; border-bottom: 1px solid var(--surface-border); color: var(--text-main); }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background-color: #fcfcfc; }
+
+        .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; background-color: var(--badge-bg); }
+        .badge-rank { background-color: rgba(217, 119, 6, 0.1); color: var(--accent-gold); border: 1px solid rgba(217, 119, 6, 0.2); }
+        .rider-meta { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+        .empty-state { text-align: center; padding: 48px; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <h1>Track Cycling Results Platform</h1>
+                <p>National Championship Official Telemetry &amp; Results Database</p>
+            </div>
+            <div class="nav-buttons">
+                <a href="{% url 'list_races' %}" class="btn-nav">View Races Directory</a>
+                <a href="{% url 'upload_pdf' %}" class="btn-nav">+ Upload New PDF</a>
+            </div>
+        </header>
+
+        <div class="controls-card">
+            <form method="get">
+                <input type="text" name="q" value="{{ query }}" placeholder="Search rider or team...">
+                
+                <select name="champ">
+                    <option value="">All Championships</option>
+                    {% for c in championships %}
+                        <option value="{{ c.id }}" {% if selected_champ == c.id|stringformat:"s" %}selected{% endif %}>{{ c.edition }}th Championship ({{ c.year }})</option>
+                    {% endfor %}
+                </select>
+
+                <select name="race_type">
+                    <option value="">All Race Types</option>
+                    {% for rt in race_types %}
+                        <option value="{{ rt }}" {% if selected_race_type == rt %}selected{% endif %}>{{ rt }}</option>
+                    {% endfor %}
+                </select>
+
+                <select name="category">
+                    <option value="">All Categories</option>
+                    {% for cat in categories %}
+                        <option value="{{ cat }}" {% if selected_category == cat %}selected{% endif %}>{{ cat }}</option>
+                    {% endfor %}
+                </select>
+
+                <input type="text" name="rank" value="{{ selected_rank }}" placeholder="Rank (e.g. 1)">
+
+                <button type="submit">Filter</button>
+            </form>
+        </div>
+
+        <div class="toolbar">
+            <p style="font-size: 13px; color: var(--text-muted);">Showing matching records (capped at top 100)</p>
+            <div class="export-group">
+                <a href="?q={{ query }}&champ={{ selected_champ }}&race_type={{ selected_race_type }}&category={{ selected_category }}&rank={{ selected_rank }}&format=csv" class="btn-export">Export CSV</a>
+                <a href="?q={{ query }}&champ={{ selected_champ }}&race_type={{ selected_race_type }}&category={{ selected_category }}&rank={{ selected_rank }}&format=xlsx" class="btn-export">Export Excel</a>
+                <a href="?q={{ query }}&champ={{ selected_champ }}&race_type={{ selected_race_type }}&category={{ selected_category }}&rank={{ selected_rank }}&format=json" class="btn-export">Export JSON</a>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Edition</th>
+                        <th>Comm.</th>
+                        <th>Category</th>
+                        <th>Race Type</th>
+                        <th>Rank</th>
+                        <th>Bib</th>
+                        <th>Rider / Team Entity</th>
+                        <th>Performance</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for r in results %}
+                    <tr>
+                        <td><span style="font-weight: 600;">{{ r.race.communique.championship.edition }}th</span> <span style="color: var(--text-muted); font-size: 12px;">({{ r.race.communique.championship.year }})</span></td>
+                        <td>{{ r.race.communique.number|default:"—" }}</td>
+                        <td style="color: var(--text-muted);">{{ r.race.category }}</td>
+                        <td style="font-weight: 500;">{{ r.race.race_type }}</td>
+                        <td>
+                            <span class="badge badge-rank">{{ r.display_rank }}</span>
+                        </td>
+                        <td style="color: var(--text-muted);">{{ r.bib|default:"—" }}</td>
+                        <td>
+                            {% if r.rider %}
+                                <div style="font-weight: 500;">{{ r.rider.name }}</div>
+                                <div class="rider-meta">{{ r.team.name|default:"Independent" }}</div>
+                            {% else %}
+                                <div style="font-weight: 500; color: var(--accent-gold);">Team Entry</div>
+                                <div class="rider-meta">{{ r.team.name }}</div>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if r.time_ms %}
+                                <span style="font-family: monospace; font-size: 13px;">{{ r.time_ms }} ms</span>
+                            {% elif r.points %}
+                                <span style="font-family: monospace; font-size: 13px; color: var(--accent-gold);">{{ r.points }} pts</span>
+                            {% else %}
+                                <span style="color: var(--text-muted);">—</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if r.status == 'OK' %}
+                                <span style="color: #16a34a; font-size: 12px; font-weight: 600;">OK</span>
+                            {% else %}
+                                <span style="color: #dc2626; font-size: 12px; font-weight: 600;">{{ r.status }}</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="9" class="empty-state">No matching track results found in the database.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

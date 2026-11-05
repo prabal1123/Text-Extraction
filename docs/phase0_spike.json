@@ -1,0 +1,3758 @@
+{
+ "2025_77th_rudrapur": [
+  {
+   "page": 1,
+   "kind": "headed",
+   "words": 399,
+   "chars": 690,
+   "images": 1,
+   "image_cover": 0.033,
+   "scanned_suspect": false,
+   "size": [
+    842,
+    595
+   ],
+   "sniff": {
+    "communique": "64",
+    "category": "Men Elite",
+    "date": "Tuesday, 23 Dec 2025",
+    "distance": null,
+    "race": "madison",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Last Communique No: 64"
+   },
+   "family": "points",
+   "rank_rows_by_words": 0,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 17,
+     "max_cols": 25,
+     "none_cells": 30
+    },
+    "text": {
+     "tables": 1,
+     "rows": 36,
+     "max_cols": 21,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 2,
+   "kind": "headed",
+   "words": 272,
+   "chars": 1671,
+   "images": 1,
+   "image_cover": 0.024,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "22",
+    "category": "Men Elite",
+    "date": "FRIDAY, Dec. 19, 2025",
+    "distance": "1 Km.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 22"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 24,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 29,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 67,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 3,
+   "kind": "headed",
+   "words": 232,
+   "chars": 1442,
+   "images": 1,
+   "image_cover": 0.065,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "20",
+    "category": "Men Elite",
+    "date": "FRIDAY, Dec. 19, 2025",
+    "distance": "4 Km.",
+    "race": "team_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 20"
+   },
+   "family": "team",
+   "rank_rows_by_words": 39,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 40,
+     "max_cols": 7,
+     "none_cells": 102
+    },
+    "text": {
+     "tables": 1,
+     "rows": 56,
+     "max_cols": 10,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 4,
+   "kind": "headed",
+   "words": 282,
+   "chars": 1766,
+   "images": 1,
+   "image_cover": 0.044,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "10",
+    "category": "Men Elite",
+    "date": "SATURDAY, Dec. 20, 2025",
+    "distance": "3 Laps",
+    "race": "team_sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 10"
+   },
+   "family": "team",
+   "rank_rows_by_words": 44,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 47,
+     "max_cols": 7,
+     "none_cells": 108
+    },
+    "text": {
+     "tables": 1,
+     "rows": 54,
+     "max_cols": 9,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 5,
+   "kind": "headed",
+   "words": 164,
+   "chars": 987,
+   "images": 1,
+   "image_cover": 0.075,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "66",
+    "category": "Men Elite",
+    "date": "TUESDAY, Dec. 23, 2025",
+    "distance": null,
+    "race": "elimination",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 66"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 1,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 27,
+     "max_cols": 6,
+     "none_cells": 18
+    },
+    "text": {
+     "tables": 1,
+     "rows": 95,
+     "max_cols": 6,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 6,
+   "kind": "headed",
+   "words": 157,
+   "chars": 966,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "15",
+    "category": "Men Elite",
+    "date": "SUNDAY, Dec. 21, 2025",
+    "distance": "4 KM.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 15"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 15,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 17,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 41,
+     "max_cols": 9,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 7,
+   "kind": "headed",
+   "words": 170,
+   "chars": 1025,
+   "images": 1,
+   "image_cover": 0.038,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "48",
+    "category": "Men Elite",
+    "date": "TUESDAY, Dec. 23, 2025",
+    "distance": null,
+    "race": "keirin",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 48 classification"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 22,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 26,
+     "max_cols": 7,
+     "none_cells": 27
+    },
+    "text": {
+     "tables": 1,
+     "rows": 94,
+     "max_cols": 6,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 8,
+   "kind": "headed",
+   "words": 652,
+   "chars": 1686,
+   "images": 1,
+   "image_cover": 0.027,
+   "scanned_suspect": false,
+   "size": [
+    842,
+    595
+   ],
+   "sniff": {
+    "communique": "61",
+    "category": "Men Elite",
+    "date": "MONDAY, Dec. 22, 2025",
+    "distance": null,
+    "race": "omnium",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Last Communique 61"
+   },
+   "family": "points",
+   "rank_rows_by_words": 18,
+   "tables": {
+    "lines": {
+     "tables": 2,
+     "rows": 26,
+     "max_cols": 29,
+     "none_cells": 60
+    },
+    "text": {
+     "tables": 1,
+     "rows": 87,
+     "max_cols": 26,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 9,
+   "kind": "headed",
+   "words": 271,
+   "chars": 1520,
+   "images": 1,
+   "image_cover": 0.083,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "35",
+    "category": "Men Elite",
+    "date": "Monday, Dec. 22, 2025",
+    "distance": "200 mts.",
+    "race": "sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 35"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 25,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 29,
+     "max_cols": 7,
+     "none_cells": 18
+    },
+    "text": {
+     "tables": 1,
+     "rows": 61,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 10,
+   "kind": "blank",
+   "words": 0,
+   "chars": 0,
+   "images": 1,
+   "image_cover": 0.083,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": null,
+    "category": null,
+    "date": null,
+    "distance": null,
+    "race": null,
+    "revision": false,
+    "text_starts_with_header": false,
+    "first_line": ""
+   },
+   "family": null,
+   "rank_rows_by_words": 0
+  },
+  {
+   "page": 11,
+   "kind": "headed",
+   "words": 192,
+   "chars": 1130,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "50",
+    "category": "Men Elite",
+    "date": "SATURDAY, Dec. 20, 2025",
+    "distance": "10 KM",
+    "race": "scratch",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 50"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 24,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 26,
+     "max_cols": 7,
+     "none_cells": 10
+    },
+    "text": {
+     "tables": 1,
+     "rows": 58,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 12,
+   "kind": "headed",
+   "words": 231,
+   "chars": 1435,
+   "images": 1,
+   "image_cover": 0.068,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "83",
+    "category": "Women Elite",
+    "date": "FRIDAY, Dec. 19, 2025",
+    "distance": "1 Km.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 83"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 24,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 25,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 56,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 13,
+   "kind": "headed",
+   "words": 182,
+   "chars": 1167,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "81",
+    "category": "Women Elite",
+    "date": "FRIDAY, Dec. 19, 2025",
+    "distance": "4 Km.",
+    "race": "team_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 81"
+   },
+   "family": "team",
+   "rank_rows_by_words": 27,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 28,
+     "max_cols": 7,
+     "none_cells": 69
+    },
+    "text": {
+     "tables": 1,
+     "rows": 65,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 14,
+   "kind": "footer_only",
+   "words": 6,
+   "chars": 72,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": null,
+    "category": null,
+    "date": null,
+    "distance": null,
+    "race": null,
+    "revision": false,
+    "text_starts_with_header": false,
+    "first_line": "_______________________________"
+   },
+   "family": null,
+   "rank_rows_by_words": 0
+  },
+  {
+   "page": 15,
+   "kind": "headed",
+   "words": 200,
+   "chars": 1247,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "71",
+    "category": "Women Elite",
+    "date": "SATURDAY, Dec. 20, 2025",
+    "distance": "3 Laps",
+    "race": "team_sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 71"
+   },
+   "family": "team",
+   "rank_rows_by_words": 31,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 33,
+     "max_cols": 7,
+     "none_cells": 87
+    },
+    "text": {
+     "tables": 1,
+     "rows": 72,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 16,
+   "kind": "headed",
+   "words": 129,
+   "chars": 806,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "76",
+    "category": "Women Elite",
+    "date": "SUNDAY, Dec. 21, 2025",
+    "distance": "4 KM.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 76"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 12,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 14,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 27,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 17,
+   "kind": "headed",
+   "words": 129,
+   "chars": 802,
+   "images": 1,
+   "image_cover": 0.09,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "109",
+    "category": "Women Elite",
+    "date": "TUESDAY, Dec. 23, 2025",
+    "distance": null,
+    "race": "keirin",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 109 - Classification"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 16,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 21,
+     "max_cols": 6,
+     "none_cells": 18
+    },
+    "text": {
+     "tables": 1,
+     "rows": 41,
+     "max_cols": 6,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 18,
+   "kind": "blank",
+   "words": 0,
+   "chars": 0,
+   "images": 1,
+   "image_cover": 0.09,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": null,
+    "category": null,
+    "date": null,
+    "distance": null,
+    "race": null,
+    "revision": false,
+    "text_starts_with_header": false,
+    "first_line": ""
+   },
+   "family": null,
+   "rank_rows_by_words": 0
+  },
+  {
+   "page": 19,
+   "kind": "headed",
+   "words": 351,
+   "chars": 1023,
+   "images": 1,
+   "image_cover": 0.043,
+   "scanned_suspect": false,
+   "size": [
+    842,
+    595
+   ],
+   "sniff": {
+    "communique": "122",
+    "category": "Women Elite",
+    "date": "MONDAY, Dec. 22, 2025",
+    "distance": null,
+    "race": "omnium",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Last"
+   },
+   "family": "points",
+   "rank_rows_by_words": 9,
+   "tables": {
+    "lines": {
+     "tables": 2,
+     "rows": 19,
+     "max_cols": 26,
+     "none_cells": 87
+    },
+    "text": {
+     "tables": 1,
+     "rows": 32,
+     "max_cols": 26,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 20,
+   "kind": "headed",
+   "words": 208,
+   "chars": 1191,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "94",
+    "category": "Women Elite",
+    "date": "Monday, Dec. 22, 2025",
+    "distance": "200 mts.",
+    "race": "sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 94"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 17,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 20,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 51,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 21,
+   "kind": "headed",
+   "words": 148,
+   "chars": 901,
+   "images": 1,
+   "image_cover": 0.115,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "111",
+    "category": "Women Elite",
+    "date": "TUESDAY, Dec. 23, 2025",
+    "distance": "10 KM",
+    "race": "scratch",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 111"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 18,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 19,
+     "max_cols": 7,
+     "none_cells": 5
+    },
+    "text": {
+     "tables": 1,
+     "rows": 51,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 22,
+   "kind": "headed",
+   "words": 256,
+   "chars": 1644,
+   "images": 1,
+   "image_cover": 0.05,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "138",
+    "category": "Men Junior",
+    "date": "FRIDAY, Dec. 19, 2025",
+    "distance": "4 Km.",
+    "race": "team_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 138"
+   },
+   "family": "team",
+   "rank_rows_by_words": 42,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 43,
+     "max_cols": 7,
+     "none_cells": 106
+    },
+    "text": {
+     "tables": 1,
+     "rows": 55,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 23,
+   "kind": "headed",
+   "words": 226,
+   "chars": 1446,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "128",
+    "category": "Men Junior",
+    "date": "SATURDAY, 20 Dec,2025",
+    "distance": "3 Laps",
+    "race": "team_sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 128"
+   },
+   "family": "team",
+   "rank_rows_by_words": 35,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 36,
+     "max_cols": 7,
+     "none_cells": 89
+    },
+    "text": {
+     "tables": 1,
+     "rows": 69,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 24,
+   "kind": "headed",
+   "words": 241,
+   "chars": 1487,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "133",
+    "category": "Men Junior",
+    "date": "SUNDAY, Dec. 21, 2025",
+    "distance": "3 KM.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 133"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 24,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 26,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 61,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 25,
+   "kind": "fragment",
+   "words": 4,
+   "chars": 21,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": null,
+    "category": null,
+    "date": "SUNDAY, Dec. 21, 2025",
+    "distance": null,
+    "race": null,
+    "revision": false,
+    "text_starts_with_header": false,
+    "first_line": "SUNDAY, Dec. 21, 2025"
+   },
+   "family": null,
+   "rank_rows_by_words": 0
+  },
+  {
+   "page": 26,
+   "kind": "headed",
+   "words": 238,
+   "chars": 1485,
+   "images": 1,
+   "image_cover": 0.065,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "140",
+    "category": "Men Junior",
+    "date": "MONDAY, Dec. 22, 2025",
+    "distance": "1KM.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 140"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 24,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 29,
+     "max_cols": 7,
+     "none_cells": 22
+    },
+    "text": {
+     "tables": 1,
+     "rows": 62,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 27,
+   "kind": "headed",
+   "words": 149,
+   "chars": 929,
+   "images": 1,
+   "image_cover": 0.056,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "164",
+    "category": "Men Junior",
+    "date": "TUESDAY, Dec. 23, 2025",
+    "distance": null,
+    "race": "keirin",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 164 Classification"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 18,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 21,
+     "max_cols": 7,
+     "none_cells": 16
+    },
+    "text": {
+     "tables": 1,
+     "rows": 45,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 28,
+   "kind": "headed",
+   "words": 526,
+   "chars": 1469,
+   "images": 1,
+   "image_cover": 0.033,
+   "scanned_suspect": false,
+   "size": [
+    842,
+    595
+   ],
+   "sniff": {
+    "communique": "168",
+    "category": "Men Junior",
+    "date": "TUESDAY, Dec. 23, 2025",
+    "distance": null,
+    "race": "points_race",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Last Communique No: 168"
+   },
+   "family": "points",
+   "rank_rows_by_words": 18,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 25,
+     "max_cols": 23,
+     "none_cells": 52
+    },
+    "text": {
+     "tables": 1,
+     "rows": 90,
+     "max_cols": 24,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 29,
+   "kind": "headed",
+   "words": 227,
+   "chars": 1305,
+   "images": 1,
+   "image_cover": 0.083,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "151",
+    "category": "Men Junior",
+    "date": "Monday, Dec. 22, 2025",
+    "distance": "200 mts.",
+    "race": "sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 151"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 20,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 24,
+     "max_cols": 7,
+     "none_cells": 18
+    },
+    "text": {
+     "tables": 1,
+     "rows": 51,
+     "max_cols": 11,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 30,
+   "kind": "blank",
+   "words": 0,
+   "chars": 0,
+   "images": 1,
+   "image_cover": 0.083,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": null,
+    "category": null,
+    "date": null,
+    "distance": null,
+    "race": null,
+    "revision": false,
+    "text_starts_with_header": false,
+    "first_line": ""
+   },
+   "family": null,
+   "rank_rows_by_words": 0
+  },
+  {
+   "page": 31,
+   "kind": "headed",
+   "words": 205,
+   "chars": 1218,
+   "images": 1,
+   "image_cover": 0.05,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "111",
+    "category": "Men Junior",
+    "date": "MONDAY, Dec. 22, 2025",
+    "distance": "7.5KM.",
+    "race": "scratch",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 111"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 25,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 32,
+     "max_cols": 7,
+     "none_cells": 28
+    },
+    "text": {
+     "tables": 1,
+     "rows": 60,
+     "max_cols": 6,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 32,
+   "kind": "headed",
+   "words": 202,
+   "chars": 1293,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "183",
+    "category": "Women Junior",
+    "date": "FRIDAY, Dec. 19, 2025",
+    "distance": "4 Km.",
+    "race": "team_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 183"
+   },
+   "family": "team",
+   "rank_rows_by_words": 33,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 34,
+     "max_cols": 7,
+     "none_cells": 82
+    },
+    "text": {
+     "tables": 1,
+     "rows": 72,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 33,
+   "kind": "headed",
+   "words": 186,
+   "chars": 1187,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "173",
+    "category": "Women Junior",
+    "date": "SATURDAY, Dec. 20, 2025",
+    "distance": "3 Laps",
+    "race": "team_sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 173"
+   },
+   "family": "team",
+   "rank_rows_by_words": 26,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 28,
+     "max_cols": 7,
+     "none_cells": 65
+    },
+    "text": {
+     "tables": 1,
+     "rows": 68,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 34,
+   "kind": "headed",
+   "words": 186,
+   "chars": 1106,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "178",
+    "category": "Women Junior",
+    "date": "SUNDAY, Dec. 21, 2025",
+    "distance": "3 KM.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 178"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 17,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 20,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 47,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 35,
+   "kind": "headed",
+   "words": 213,
+   "chars": 1304,
+   "images": 1,
+   "image_cover": 0.062,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "185",
+    "category": "Women Junior",
+    "date": "MONDAY, Dec. 22, 2025",
+    "distance": "1 KM.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 185"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 21,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 24,
+     "max_cols": 7,
+     "none_cells": 5
+    },
+    "text": {
+     "tables": 1,
+     "rows": 55,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 36,
+   "kind": "headed",
+   "words": 151,
+   "chars": 951,
+   "images": 1,
+   "image_cover": 0.062,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "209",
+    "category": "Women Junior",
+    "date": "TUESDAY, Dec. 23, 2025",
+    "distance": null,
+    "race": "keirin",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 209 Classification"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 19,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 23,
+     "max_cols": 7,
+     "none_cells": 24
+    },
+    "text": {
+     "tables": 1,
+     "rows": 73,
+     "max_cols": 5,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 37,
+   "kind": "headed",
+   "words": 294,
+   "chars": 947,
+   "images": 1,
+   "image_cover": 0.039,
+   "scanned_suspect": false,
+   "size": [
+    792,
+    612
+   ],
+   "sniff": {
+    "communique": "213",
+    "category": "Women Junior",
+    "date": "Tuesday, 23 Dec 2025",
+    "distance": null,
+    "race": "points_race",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Last Communique No: 213"
+   },
+   "family": "points",
+   "rank_rows_by_words": 10,
+   "tables": {
+    "lines": {
+     "tables": 2,
+     "rows": 18,
+     "max_cols": 20,
+     "none_cells": 51
+    },
+    "text": {
+     "tables": 1,
+     "rows": 41,
+     "max_cols": 20,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 38,
+   "kind": "headed",
+   "words": 168,
+   "chars": 966,
+   "images": 1,
+   "image_cover": 0.078,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "194",
+    "category": "Women Junior",
+    "date": "Monday, Dec. 22, 2025",
+    "distance": "200 mts.",
+    "race": "sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 194"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 1,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 15,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 67,
+     "max_cols": 9,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 39,
+   "kind": "headed",
+   "words": 115,
+   "chars": 728,
+   "images": 1,
+   "image_cover": 0.064,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "211",
+    "category": "Women Junior",
+    "date": "MONDAY, Dec. 22, 2025",
+    "distance": "7.5KM.",
+    "race": "scratch",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 211"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 12,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 14,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 50,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 40,
+   "kind": "headed",
+   "words": 328,
+   "chars": 1908,
+   "images": 1,
+   "image_cover": 0.05,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "225",
+    "category": "Sub Junior Boys",
+    "date": "FRIDAY, Dec. 19, 2025",
+    "distance": "500 mts.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 225"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 31,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 32,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 72,
+     "max_cols": 9,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 41,
+   "kind": "headed",
+   "words": 261,
+   "chars": 1616,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "223",
+    "category": "Sub Junior Boys",
+    "date": "SATURDAY, Dec. 20, 2025",
+    "distance": "2 KM.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 223"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 27,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 29,
+     "max_cols": 7,
+     "none_cells": 10
+    },
+    "text": {
+     "tables": 1,
+     "rows": 61,
+     "max_cols": 9,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 42,
+   "kind": "headed",
+   "words": 234,
+   "chars": 1391,
+   "images": 1,
+   "image_cover": 0.075,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "227",
+    "category": "Sub Junior Boys",
+    "date": "MONDAY, Dec. 22, 2025",
+    "distance": "5KM.",
+    "race": "scratch",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 227"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 31,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 32,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 69,
+     "max_cols": 6,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 43,
+   "kind": "headed",
+   "words": 219,
+   "chars": 1391,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "218",
+    "category": "Sub Junior Boys",
+    "date": "SATURDAY, Dec. 20, 2025",
+    "distance": "3 Laps",
+    "race": "team_sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 218"
+   },
+   "family": "team",
+   "rank_rows_by_words": 34,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 35,
+     "max_cols": 7,
+     "none_cells": 67
+    },
+    "text": {
+     "tables": 1,
+     "rows": 75,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 44,
+   "kind": "headed",
+   "words": 242,
+   "chars": 1523,
+   "images": 1,
+   "image_cover": 0.046,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "239",
+    "category": "Sub Junior Girls",
+    "date": "FRIDAY, Dec. 19, 2025",
+    "distance": "500 mts.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 239"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 25,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 27,
+     "max_cols": 7,
+     "none_cells": 5
+    },
+    "text": {
+     "tables": 1,
+     "rows": 59,
+     "max_cols": 10,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 45,
+   "kind": "headed",
+   "words": 180,
+   "chars": 1142,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "237",
+    "category": "Sub Junior Girls",
+    "date": "SATURDAY, Dec. 20, 2025",
+    "distance": "2 KM.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 237"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 18,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 19,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 85,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 46,
+   "kind": "headed",
+   "words": 164,
+   "chars": 977,
+   "images": 1,
+   "image_cover": 0.072,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "241",
+    "category": "Sub Junior Girls",
+    "date": "MONDAY, Dec. 22, 2025",
+    "distance": "5KM.",
+    "race": "scratch",
+    "revision": true,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 241 Rev"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 20,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 21,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 51,
+     "max_cols": 6,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 47,
+   "kind": "headed",
+   "words": 200,
+   "chars": 1318,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "232",
+    "category": "Sub Junior Girls",
+    "date": "SATURDAY, Dec. 20, 2025",
+    "distance": "3 Laps",
+    "race": "team_sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 232"
+   },
+   "family": "team",
+   "rank_rows_by_words": 31,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 32,
+     "max_cols": 7,
+     "none_cells": 68
+    },
+    "text": {
+     "tables": 1,
+     "rows": 73,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 48,
+   "kind": "headed",
+   "words": 320,
+   "chars": 1971,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "246",
+    "category": "Youth Boys",
+    "date": "SATURDAY, Dec. 20, 2025",
+    "distance": "2KM.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 246"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 34,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 35,
+     "max_cols": 7,
+     "none_cells": 5
+    },
+    "text": {
+     "tables": 1,
+     "rows": 77,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 49,
+   "kind": "headed",
+   "words": 279,
+   "chars": 1763,
+   "images": 1,
+   "image_cover": 0.082,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "253",
+    "category": "Youth Girls",
+    "date": "SATURDAY, Dec. 20, 2025",
+    "distance": "2 KM.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 253"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 30,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 31,
+     "max_cols": 7,
+     "none_cells": 13
+    },
+    "text": {
+     "tables": 1,
+     "rows": 66,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 50,
+   "kind": "headed",
+   "words": 357,
+   "chars": 2205,
+   "images": 1,
+   "image_cover": 0.041,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "248",
+    "category": "Youth Boys",
+    "date": "FRIDAY, Dec. 19, 2025",
+    "distance": "500 mts.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 248"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 38,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 39,
+     "max_cols": 8,
+     "none_cells": 38
+    },
+    "text": {
+     "tables": 1,
+     "rows": 85,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 51,
+   "kind": "headed",
+   "words": 286,
+   "chars": 1778,
+   "images": 1,
+   "image_cover": 0.052,
+   "scanned_suspect": false,
+   "size": [
+    595,
+    842
+   ],
+   "sniff": {
+    "communique": "255",
+    "category": "Youth Girls",
+    "date": "FRIDAY, Dec. 19, 2025",
+    "distance": "500 mts.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "Communique No. 255"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 30,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 31,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 65,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  }
+ ],
+ "2023_75th_ranchi": [
+  {
+   "page": 1,
+   "kind": "headed",
+   "words": 277,
+   "chars": 1797,
+   "images": 2,
+   "image_cover": 0.008,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "10",
+    "category": "Men Elite",
+    "date": "Friday, Dec. 1, 2023",
+    "distance": null,
+    "race": "team_sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "team",
+   "rank_rows_by_words": 39,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 28,
+     "max_cols": 7,
+     "none_cells": 58
+    },
+    "text": {
+     "tables": 1,
+     "rows": 58,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 2,
+   "kind": "headed",
+   "words": 202,
+   "chars": 1300,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "15",
+    "category": "Men Elite",
+    "date": "Saturday, Dec. 2, 2023",
+    "distance": "4000 Mtrs.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 18,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 19,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 55,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 3,
+   "kind": "headed",
+   "words": 207,
+   "chars": 1367,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "20",
+    "category": "Men Elite",
+    "date": "Thursday, Nov. 30, 2023",
+    "distance": "4000 Mtrs.",
+    "race": "team_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "team",
+   "rank_rows_by_words": 31,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 32,
+     "max_cols": 7,
+     "none_cells": 102
+    },
+    "text": {
+     "tables": 1,
+     "rows": 81,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 4,
+   "kind": "headed",
+   "words": 300,
+   "chars": 1869,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "22",
+    "category": "Men Elite",
+    "date": "Thursday, Nov. 30, 2023",
+    "distance": "1000 Mtrs.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 27,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 28,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 72,
+     "max_cols": 9,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 5,
+   "kind": "headed",
+   "words": 268,
+   "chars": 1694,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "33",
+    "category": "Men Elite",
+    "date": "Sunday, Dec. 3, 2023",
+    "distance": "200 Mtrs.",
+    "race": "sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 25,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 26,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 72,
+     "max_cols": 10,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 6,
+   "kind": "headed",
+   "words": 118,
+   "chars": 756,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "46",
+    "category": "Men Elite",
+    "date": "Monday, Dec. 4, 2023",
+    "distance": null,
+    "race": "keirin",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 10,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 11,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 39,
+     "max_cols": 6,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 7,
+   "kind": "headed",
+   "words": 319,
+   "chars": 1887,
+   "images": 2,
+   "image_cover": 0.008,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "48",
+    "category": "Men Elite",
+    "date": "Friday, Dec. 1, 2023",
+    "distance": "15 Km.",
+    "race": "scratch",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 32,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 33,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 65,
+     "max_cols": 10,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 8,
+   "kind": "headed",
+   "words": 515,
+   "chars": 1575,
+   "images": 2,
+   "image_cover": 0.014,
+   "scanned_suspect": false,
+   "size": [
+    792,
+    612
+   ],
+   "sniff": {
+    "communique": null,
+    "category": "Men Elite",
+    "date": null,
+    "distance": null,
+    "race": "omnium",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior & 38th Sub-Junior National"
+   },
+   "family": "points",
+   "rank_rows_by_words": 0,
+   "tables": {
+    "lines": {
+     "tables": 2,
+     "rows": 27,
+     "max_cols": 13,
+     "none_cells": 69
+    },
+    "text": {
+     "tables": 1,
+     "rows": 49,
+     "max_cols": 26,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 9,
+   "kind": "headed",
+   "words": 257,
+   "chars": 884,
+   "images": 2,
+   "image_cover": 0.007,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "62",
+    "category": "Men Elite",
+    "date": "Monday, Dec. 4, 2023",
+    "distance": "30 Km.",
+    "race": "madison",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "points",
+   "rank_rows_by_words": 7,
+   "tables": {
+    "lines": {
+     "tables": 2,
+     "rows": 24,
+     "max_cols": 25,
+     "none_cells": 190
+    },
+    "text": {
+     "tables": 1,
+     "rows": 39,
+     "max_cols": 18,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 10,
+   "kind": "headed",
+   "words": 171,
+   "chars": 1122,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "67",
+    "category": "Women Elite",
+    "date": "Friday, Dec. 1, 2023",
+    "distance": null,
+    "race": "team_sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "team",
+   "rank_rows_by_words": 21,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 22,
+     "max_cols": 7,
+     "none_cells": 58
+    },
+    "text": {
+     "tables": 1,
+     "rows": 61,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 11,
+   "kind": "headed",
+   "words": 173,
+   "chars": 1124,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "72",
+    "category": "Women Elite",
+    "date": "Saturday, Dec. 2, 2023",
+    "distance": "3000 Mtrs.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 15,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 16,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 49,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 12,
+   "kind": "headed",
+   "words": 215,
+   "chars": 1442,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "77",
+    "category": "Women Elite",
+    "date": "Thursday, Nov. 30, 2023",
+    "distance": "4000 Mtrs.",
+    "race": "team_pursuit",
+    "revision": true,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "team",
+   "rank_rows_by_words": 31,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 32,
+     "max_cols": 7,
+     "none_cells": 102
+    },
+    "text": {
+     "tables": 1,
+     "rows": 82,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 13,
+   "kind": "headed",
+   "words": 222,
+   "chars": 1387,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "79",
+    "category": "Women Elite",
+    "date": "Thursday, Nov. 30, 2023",
+    "distance": "500 Mtrs.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 21,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 22,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 61,
+     "max_cols": 10,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 14,
+   "kind": "headed",
+   "words": 177,
+   "chars": 1137,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "88",
+    "category": "Women Elite",
+    "date": "Sunday, Dec. 3, 2023",
+    "distance": "200 Mtrs.",
+    "race": "sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 15,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 16,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 52,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 15,
+   "kind": "headed",
+   "words": 110,
+   "chars": 707,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "103",
+    "category": "Women Elite",
+    "date": "Monday, Dec. 4, 2023",
+    "distance": null,
+    "race": "keirin",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 9,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 10,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 37,
+     "max_cols": 6,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 16,
+   "kind": "headed",
+   "words": 194,
+   "chars": 1193,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "105",
+    "category": "Women Elite",
+    "date": "Friday, Dec. 1, 2023",
+    "distance": "10 Km.",
+    "race": "scratch",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 20,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 21,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 63,
+     "max_cols": 6,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 17,
+   "kind": "headed",
+   "words": 282,
+   "chars": 1051,
+   "images": 2,
+   "image_cover": 0.017,
+   "scanned_suspect": false,
+   "size": [
+    792,
+    612
+   ],
+   "sniff": {
+    "communique": null,
+    "category": "Women Elite",
+    "date": null,
+    "distance": null,
+    "race": "omnium",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior & 38th Sub-Junior National"
+   },
+   "family": "points",
+   "rank_rows_by_words": 0,
+   "tables": {
+    "lines": {
+     "tables": 2,
+     "rows": 19,
+     "max_cols": 12,
+     "none_cells": 63
+    },
+    "text": {
+     "tables": 1,
+     "rows": 40,
+     "max_cols": 19,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 18,
+   "kind": "headed",
+   "words": 263,
+   "chars": 1734,
+   "images": 2,
+   "image_cover": 0.01,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "122",
+    "category": "Men Junior",
+    "date": "Friday, Dec. 1, 2023",
+    "distance": null,
+    "race": "team_sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "team",
+   "rank_rows_by_words": 38,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 39,
+     "max_cols": 7,
+     "none_cells": 106
+    },
+    "text": {
+     "tables": 1,
+     "rows": 59,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 19,
+   "kind": "headed",
+   "words": 256,
+   "chars": 1646,
+   "images": 2,
+   "image_cover": 0.015,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "127",
+    "category": "Men Junior",
+    "date": "Saturday, Dec. 2, 2023",
+    "distance": "3000 Mtrs.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 24,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 25,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 63,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 20,
+   "kind": "headed",
+   "words": 255,
+   "chars": 1689,
+   "images": 2,
+   "image_cover": 0.009,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "132",
+    "category": "Men Junior",
+    "date": "Thursday, Nov. 30, 2023",
+    "distance": "4000 Mtrs.",
+    "race": "team_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "team",
+   "rank_rows_by_words": 38,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 39,
+     "max_cols": 7,
+     "none_cells": 122
+    },
+    "text": {
+     "tables": 1,
+     "rows": 56,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 21,
+   "kind": "headed",
+   "words": 282,
+   "chars": 1743,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "134",
+    "category": "Men Junior",
+    "date": "Sunday, Dec. 3, 2023",
+    "distance": "1000 Mtrs.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 27,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 35,
+     "max_cols": 7,
+     "none_cells": 14
+    },
+    "text": {
+     "tables": 1,
+     "rows": 41,
+     "max_cols": 11,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 22,
+   "kind": "headed",
+   "words": 224,
+   "chars": 1453,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "145",
+    "category": "Men Junior",
+    "date": "Sunday, Dec. 3, 2023",
+    "distance": "200 Mtrs.",
+    "race": "sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 20,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 21,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 59,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 23,
+   "kind": "headed",
+   "words": 127,
+   "chars": 827,
+   "images": 2,
+   "image_cover": 0.016,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "158",
+    "category": "Men Junior",
+    "date": "Monday, Dec. 4, 2023",
+    "distance": null,
+    "race": "keirin",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 11,
+   "tables": {
+    "lines": {
+     "tables": 2,
+     "rows": 12,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 38,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 24,
+   "kind": "headed",
+   "words": 271,
+   "chars": 1655,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "160",
+    "category": "Men Junior",
+    "date": "Sunday, Dec. 3, 2023",
+    "distance": "10 Km.",
+    "race": "scratch",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 33,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 34,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 85,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 25,
+   "kind": "headed",
+   "words": 336,
+   "chars": 1479,
+   "images": 2,
+   "image_cover": 0.009,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "162",
+    "category": "Men Junior",
+    "date": "Monday, Dec. 4, 2023",
+    "distance": "20 Km.",
+    "race": "points_race",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "points",
+   "rank_rows_by_words": 24,
+   "tables": {
+    "lines": {
+     "tables": 2,
+     "rows": 31,
+     "max_cols": 19,
+     "none_cells": 5
+    },
+    "text": {
+     "tables": 1,
+     "rows": 40,
+     "max_cols": 18,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 26,
+   "kind": "headed",
+   "words": 192,
+   "chars": 1274,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "167",
+    "category": "Women Junior",
+    "date": "Friday, Dec. 1, 2023",
+    "distance": null,
+    "race": "team_sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "team",
+   "rank_rows_by_words": 26,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 27,
+     "max_cols": 7,
+     "none_cells": 74
+    },
+    "text": {
+     "tables": 1,
+     "rows": 71,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 27,
+   "kind": "headed",
+   "words": 194,
+   "chars": 1258,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "172",
+    "category": "Women Junior",
+    "date": "Saturday, Dec. 2, 2023",
+    "distance": "2000 Mtrs.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 16,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 17,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 51,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 28,
+   "kind": "headed",
+   "words": 196,
+   "chars": 1314,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "177",
+    "category": "Women Junior",
+    "date": "Thursday, Nov. 30, 2023",
+    "distance": "4000 Mtrs.",
+    "race": "team_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "team",
+   "rank_rows_by_words": 27,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 28,
+     "max_cols": 7,
+     "none_cells": 90
+    },
+    "text": {
+     "tables": 1,
+     "rows": 76,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 29,
+   "kind": "headed",
+   "words": 243,
+   "chars": 1497,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "179",
+    "category": "Women Junior",
+    "date": "Sunday, Dec. 3, 2023",
+    "distance": "500 Mtrs.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 24,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 25,
+     "max_cols": 7,
+     "none_cells": 7
+    },
+    "text": {
+     "tables": 1,
+     "rows": 61,
+     "max_cols": 9,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 30,
+   "kind": "headed",
+   "words": 156,
+   "chars": 1029,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "188",
+    "category": "Women Junior",
+    "date": "Sunday, Dec. 3, 2023",
+    "distance": "200 Mtrs.",
+    "race": "sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 12,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 13,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 43,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 31,
+   "kind": "headed",
+   "words": 120,
+   "chars": 756,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "203",
+    "category": "Women Junior",
+    "date": "Monday, Dec. 4, 2023",
+    "distance": null,
+    "race": "keirin",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 10,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 11,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 39,
+     "max_cols": 6,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 32,
+   "kind": "headed",
+   "words": 189,
+   "chars": 1163,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "205",
+    "category": "Women Junior",
+    "date": "Sunday, Dec. 3, 2023",
+    "distance": "6 Km.",
+    "race": "scratch",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 20,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 22,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 61,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 33,
+   "kind": "headed",
+   "words": 195,
+   "chars": 948,
+   "images": 2,
+   "image_cover": 0.013,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "207",
+    "category": "Women Junior",
+    "date": "Monday, Dec. 4, 2023",
+    "distance": "10 Km.",
+    "race": "points_race",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "points",
+   "rank_rows_by_words": 12,
+   "tables": {
+    "lines": {
+     "tables": 2,
+     "rows": 19,
+     "max_cols": 14,
+     "none_cells": 5
+    },
+    "text": {
+     "tables": 1,
+     "rows": 47,
+     "max_cols": 13,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 34,
+   "kind": "headed",
+   "words": 288,
+   "chars": 1854,
+   "images": 2,
+   "image_cover": 0.008,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "212",
+    "category": "Sub Junior Boys",
+    "date": "Friday, Dec. 1, 2023",
+    "distance": null,
+    "race": "team_sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "team",
+   "rank_rows_by_words": 41,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 42,
+     "max_cols": 7,
+     "none_cells": 114
+    },
+    "text": {
+     "tables": 1,
+     "rows": 62,
+     "max_cols": 9,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 35,
+   "kind": "headed",
+   "words": 317,
+   "chars": 2011,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "217",
+    "category": "Sub Junior Boys",
+    "date": "Friday, Dec. 1, 2023",
+    "distance": "2000 Mtrs.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 31,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 32,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 80,
+     "max_cols": 10,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 36,
+   "kind": "headed",
+   "words": 311,
+   "chars": 1934,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "219",
+    "category": "Sub Junior Boys",
+    "date": "Thursday, Nov. 30, 2023",
+    "distance": "500 Mtrs.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 30,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 31,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 71,
+     "max_cols": 9,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 37,
+   "kind": "headed",
+   "words": 266,
+   "chars": 1623,
+   "images": 2,
+   "image_cover": 0.01,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "221",
+    "category": "Sub Junior Boys",
+    "date": "Sunday, Dec. 3, 2023",
+    "distance": "7 Km.",
+    "race": "scratch",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 32,
+   "tables": {
+    "lines": {
+     "tables": 2,
+     "rows": 33,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 53,
+     "max_cols": 10,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 38,
+   "kind": "headed",
+   "words": 191,
+   "chars": 1279,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "226",
+    "category": "Sub Junior Girls",
+    "date": "Friday, Dec. 1, 2023",
+    "distance": null,
+    "race": "team_sprint",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "team",
+   "rank_rows_by_words": 25,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 26,
+     "max_cols": 7,
+     "none_cells": 70
+    },
+    "text": {
+     "tables": 1,
+     "rows": 64,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 39,
+   "kind": "headed",
+   "words": 247,
+   "chars": 1601,
+   "images": 2,
+   "image_cover": 0.016,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "231",
+    "category": "Sub Junior Girls",
+    "date": "Friday, Dec. 1, 2023",
+    "distance": "2000 Mtrs.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 23,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 24,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 66,
+     "max_cols": 9,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 40,
+   "kind": "headed",
+   "words": 297,
+   "chars": 1865,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "233",
+    "category": "Sub Junior Girls",
+    "date": "Thursday, Nov. 30, 2023",
+    "distance": "500 Mtrs.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 29,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 31,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 74,
+     "max_cols": 9,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 41,
+   "kind": "headed",
+   "words": 196,
+   "chars": 1206,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "235",
+    "category": "Sub Junior Girls",
+    "date": "Sunday, Dec. 3, 2023",
+    "distance": "5 Km.",
+    "race": "scratch",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "placing",
+   "rank_rows_by_words": 22,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 23,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 63,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 42,
+   "kind": "headed",
+   "words": 336,
+   "chars": 2130,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "240",
+    "category": "Youth Boys",
+    "date": "Friday, Dec. 1, 2023",
+    "distance": "2000 Mtrs.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 35,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 36,
+     "max_cols": 6,
+     "none_cells": 5
+    },
+    "text": {
+     "tables": 1,
+     "rows": 89,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 43,
+   "kind": "headerless",
+   "words": 77,
+   "chars": 527,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": null,
+    "category": null,
+    "date": null,
+    "distance": null,
+    "race": null,
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": null,
+   "rank_rows_by_words": 6,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 6,
+     "max_cols": 6,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 11,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 44,
+   "kind": "headed",
+   "words": 337,
+   "chars": 2086,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "242",
+    "category": "Youth Boys",
+    "date": "Thursday, Nov. 30, 2023",
+    "distance": "500 Mtrs.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 35,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 36,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 85,
+     "max_cols": 10,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 45,
+   "kind": "headerless",
+   "words": 79,
+   "chars": 559,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": null,
+    "category": null,
+    "date": null,
+    "distance": null,
+    "race": null,
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": null,
+   "rank_rows_by_words": 6,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 6,
+     "max_cols": 7,
+     "none_cells": 0
+    },
+    "text": {
+     "tables": 1,
+     "rows": 16,
+     "max_cols": 7,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 46,
+   "kind": "headed",
+   "words": 305,
+   "chars": 1931,
+   "images": 2,
+   "image_cover": 0.012,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "246",
+    "category": "Youth Girls",
+    "date": "Friday, Dec. 1, 2023",
+    "distance": "2000 Mtrs.",
+    "race": "individual_pursuit",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 28,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 31,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 78,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  },
+  {
+   "page": 47,
+   "kind": "headed",
+   "words": 343,
+   "chars": 2140,
+   "images": 2,
+   "image_cover": 0.011,
+   "scanned_suspect": false,
+   "size": [
+    612,
+    792
+   ],
+   "sniff": {
+    "communique": "249",
+    "category": "Youth Girls",
+    "date": "Thursday, Nov. 30, 2023",
+    "distance": "500 Mtrs.",
+    "race": "individual_time_trial",
+    "revision": false,
+    "text_starts_with_header": true,
+    "first_line": "75th Senior, 52nd Junior 38th Sub-Junior National"
+   },
+   "family": "timed",
+   "rank_rows_by_words": 34,
+   "tables": {
+    "lines": {
+     "tables": 1,
+     "rows": 36,
+     "max_cols": 7,
+     "none_cells": 6
+    },
+    "text": {
+     "tables": 1,
+     "rows": 53,
+     "max_cols": 8,
+     "none_cells": 0
+    }
+   }
+  }
+ ]
+}

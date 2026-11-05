@@ -1,0 +1,9 @@
+columns:
+  rank: [Rank, Position, Pos]
+  bib: [Start No., Rider No., Bib No., Bib, art No., der No.]
+  name: [Name, Name of the Cyclist, Name of Rider, NNoa.me]
+  dob: [DOB, D.O.B]
+  team: [State, Team, State/Team]
+  points: [Total Points, Points, Total]
+  lap: [Lap +/-, +/-, Lap]
+  finish_order: [FO, Finish Order]

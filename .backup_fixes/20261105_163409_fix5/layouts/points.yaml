@@ -1,0 +1,8 @@
+columns:
+  rank: ["Rank", "Position"]
+  bib: ["Start No.", "Rider No.", "Bib No.", "Bib"]
+  name: ["Name", "Name of the Cyclist", "Name of Rider"]
+  dob: ["DOB", "D.O.B"]
+  team: ["State", "Team", "State/Team"]
+  points: ["Total Points", "Points", "Total"]
+  lap: ["Lap +/-", "+/-", "Lap"]
