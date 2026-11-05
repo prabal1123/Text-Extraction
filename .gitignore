@@ -4,3 +4,4 @@ db.sqlite3
 .venv/
 .pytest_cache/
 downloads/
+db.sqlite3.bak
