@@ -19,9 +19,7 @@ _STATUS_WORDS = re.compile(r"\b(DNS|DNF|DSQ|ABD|REL|RELEGATED|RELEGATE)\b", re.I
 _FOOTER_RE = re.compile(r"communiq|approved|commissair|commissar|organi[sz]ed by", re.I)
 
 
-# ------------------------------------------------------------------ time
 def parse_time_to_ms(value):
-    """Accepts ss.mmm, m:ss.mmm and h:mm:ss.mmm."""
     if not value:
         return None
     m = re.search(r"(?:(\d{1,2}):)?(?:(\d{1,2}):)?(\d{1,2})\.(\d{1,3})", str(value))
@@ -40,7 +38,6 @@ def parse_time_to_ms(value):
 
 
 def split_time_speed(text):
-    """Return (time_str, speed_str, remainder). Handles h:mm:ss.mmm."""
     tm = _TIME_RE.search(text)
     time_str = tm.group(1) if tm else ""
     rest = text.replace(time_str, " ", 1) if time_str else text
@@ -51,7 +48,6 @@ def split_time_speed(text):
     return time_str, speed_str, rest
 
 
-# ------------------------------------------------------------------- DOB
 def _year(y):
     y = int(y)
     if y < 100:
@@ -60,13 +56,11 @@ def _year(y):
 
 
 def normalize_dob(raw):
-    """Return (value, ok). value is ISO yyyy-mm-dd when readable, otherwise the
-    cleaned raw text with ok=False (3-digit years, impossible dates, ...)."""
     s = (raw or "").strip()
     if not s:
         return "", True
     t = s.replace(" ", "")
-    m = re.fullmatch(r"(\d{1,2})[./-](\d{2})(\d{4})", t)      # 19/072007 typo
+    m = re.fullmatch(r"(\d{1,2})[./-](\d{2})(\d{4})", t)
     if m:
         d, mo, y = m.groups()
     else:
@@ -81,10 +75,10 @@ def normalize_dob(raw):
     else:
         mo = int(mo)
     d = int(d)
-    if len(y) == 3:                                            # 28.10.209
+    if len(y) == 3:
         return s, False
     y = _year(y)
-    if mo > 12 >= d:                                           # US order, e.g. 10/18/2006
+    if mo > 12 >= d:
         d, mo = mo, d
     try:
         return date(y, mo, d).isoformat(), True
@@ -92,7 +86,6 @@ def normalize_dob(raw):
         return s, False
 
 
-# ------------------------------------------------------ row validation
 def looks_like_footer(row):
     for k, v in row.items():
         if k.startswith("_") or not isinstance(v, str):
@@ -115,8 +108,6 @@ def is_valid_row(row):
 
 
 def group_madison(rows):
-    """Madison sheets list the second rider of a team on a row with blank
-    rank/bib/team. Fold those into the previous row as '_partners'."""
     out = []
     for r in rows:
         own = ((r.get("rank") or "").strip() or (r.get("bib") or "").strip()
@@ -129,7 +120,6 @@ def group_madison(rows):
 
 
 def total_points(row):
-    """Highest-numbered numeric 'points' column (Omnium: last = overall total)."""
     best, best_n = None, -1
     for k, v in row.items():
         m = re.fullmatch(r"points(?:_(\d+))?", k)
@@ -140,7 +130,6 @@ def total_points(row):
     return best
 
 
-# ------------------------------------------------ text line parsing
 def _lines(page, y_tol=3.0):
     words = page.extract_words(x_tolerance=2, y_tolerance=3)
     lines = []
@@ -160,8 +149,6 @@ def _clean_team(text):
 
 
 def split_row_line(line):
-    """Split 'rank bib name dob team time speed'. Returns a dict, or None when
-    the line has no DOB (so it is not a rider line)."""
     m = _DOB_RE.search(line)
     if not m:
         return None
@@ -184,12 +171,16 @@ def split_row_line(line):
     }
 
 
-def parse_dob_lines(pdf_path, pages):
-    """Fallback for timed/placing pages where no table header was recognised."""
+def parse_dob_lines(pdf_path, pages, y_top=None, y_bottom=None):
     rows = []
     with pdfplumber.open(pdf_path) as pdf:
         for p_num in pages:
-            for line in _lines(pdf.pages[p_num - 1]):
+            page = pdf.pages[p_num - 1]
+            if y_top is not None or y_bottom is not None:
+                yt = y_top if y_top is not None else 0
+                yb = y_bottom if y_bottom is not None else page.height
+                page = page.crop((0, yt, page.width, yb))
+            for line in _lines(page):
                 r = split_row_line(line)
                 if r and r["name"]:
                     rows.append({
@@ -202,13 +193,7 @@ def parse_dob_lines(pdf_path, pages):
     return rows
 
 
-def parse_team_blocks(pdf_path, pages):
-    """Team Sprint / Team Pursuit pages -> blocks of members.
-
-    A new team starts when a rank appears that differs from the current team's
-    rank, when the team name changes, or when a different time appears. Team
-    name / time / speed seen on later member lines fill gaps in the current
-    team. Stray rank-only lines (Gold, 3, ...) apply to the next team."""
+def parse_team_blocks(pdf_path, pages, y_top=None, y_bottom=None):
     def norm(s):
         return re.sub(r"\W+", "", (s or "").lower())
 
@@ -217,7 +202,12 @@ def parse_team_blocks(pdf_path, pages):
     pending_rank = ""
     with pdfplumber.open(pdf_path) as pdf:
         for p_num in pages:
-            for line in _lines(pdf.pages[p_num - 1]):
+            page = pdf.pages[p_num - 1]
+            if y_top is not None or y_bottom is not None:
+                yt = y_top if y_top is not None else 0
+                yb = y_bottom if y_bottom is not None else page.height
+                page = page.crop((0, yt, page.width, yb))
+            for line in _lines(page):
                 row = split_row_line(line)
                 if row is None:
                     token = line.strip()
@@ -260,7 +250,6 @@ def parse_team_blocks(pdf_path, pages):
     return blocks
 
 
-# ------------------------------------------------------------ Omnium
 _KNOWN_TEAMS = {t.lower() for t in [
     "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Chattisgarh",
     "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala",
@@ -280,7 +269,6 @@ _OMNIUM_STATUS = re.compile(r"^(?P<status>DNF|DNS|DSQ|ABD|REL)\s+(?P<bib>\d{1,4}
 
 
 def _split_name_team(mid):
-    """'Bilal Ahmad Dar Jammu & Kashmir' -> ('Bilal Ahmad Dar', 'Jammu & Kashmir', '')."""
     toks = mid.split()
     for k in (4, 3, 2, 1):
         if len(toks) > k and " ".join(toks[-k:]).lower() in _KNOWN_TEAMS:
@@ -291,9 +279,6 @@ def _split_name_team(mid):
 
 
 def parse_omnium_text(lines):
-    """Omnium sheets from text lines. Reads rank, bib, name, team, the three event
-    cells, the sub-total and the total (last number on the line). The sprint
-    breakdown is not read: blank cells print nothing, so positions are ambiguous."""
     rows = []
     for line in lines:
         line = line.strip()
@@ -328,40 +313,42 @@ def parse_omnium_text(lines):
     return rows
 
 
-def parse_omnium_lines(pdf_path, pages):
+def parse_omnium_lines(pdf_path, pages, y_top=None, y_bottom=None):
     rows = []
     with pdfplumber.open(pdf_path) as pdf:
         for p_num in pages:
-            rows.extend(parse_omnium_text(_lines(pdf.pages[p_num - 1])))
+            page = pdf.pages[p_num - 1]
+            if y_top is not None or y_bottom is not None:
+                yt = y_top if y_top is not None else 0
+                yb = y_bottom if y_bottom is not None else page.height
+                page = page.crop((0, yt, page.width, yb))
+            rows.extend(parse_omnium_text(_lines(page)))
     return rows
 
 
-# ------------------------------------------------------------ top level
-def parse_rows(pdf_path, pages, layout_family, race_type=""):
-    """Table parse -> footer/validity filter -> text fallback -> Madison grouping."""
+def parse_rows(pdf_path, pages, layout_family, race_type="", y_top=None, y_bottom=None):
     if "omnium" in (race_type or "").lower():
-        return parse_omnium_lines(pdf_path, pages), {"dropped": 0, "fallback": False}
-    rows = parse_pdf_tables(pdf_path, pages, layout_family)
+        return parse_omnium_lines(pdf_path, pages, y_top, y_bottom), {"dropped": 0, "fallback": False}
+    rows = parse_pdf_tables(pdf_path, pages, layout_family, y_top, y_bottom)
     total = len(rows)
     rows = [r for r in rows if is_valid_row(r)]
     dropped = total - len(rows)
     fallback = False
     if not rows and layout_family in ("timed", "placing"):
-        rows = [r for r in parse_dob_lines(pdf_path, pages) if is_valid_row(r)]
+        rows = [r for r in parse_dob_lines(pdf_path, pages, y_top, y_bottom) if is_valid_row(r)]
         fallback = bool(rows)
     if "madison" in (race_type or "").lower():
         rows = group_madison(rows)
     return rows, {"dropped": dropped, "fallback": fallback}
 
 
-def golden_rows(pdf_path, pages, layout, race_type=""):
-    """Normalised output used by the golden-file tests."""
+def golden_rows(pdf_path, pages, layout, race_type="", y_top=None, y_bottom=None):
     if layout == "team":
         return [{"rank": b["rank"], "team": b["team"], "time": b["time"],
                  "speed": b["speed"], "status": b["status"],
                  "members": [m["name"] for m in b["members"]]}
-                for b in parse_team_blocks(pdf_path, pages)]
-    rows, _ = parse_rows(pdf_path, pages, layout, race_type)
+                for b in parse_team_blocks(pdf_path, pages, y_top, y_bottom)]
+    rows, _ = parse_rows(pdf_path, pages, layout, race_type, y_top, y_bottom)
     out = []
     for r in rows:
         d = {k: (r.get(k) or "") for k in ("rank", "bib", "name", "dob", "team", "time", "speed")}

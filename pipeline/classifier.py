@@ -23,8 +23,8 @@ def classify_communique(header_text):
         'distance': None, 'layout_family': 'unknown', 'race_date': None
     }
     
-    # 1. Communique Number (Handles "Communique No. 22", "No: 64", "Last Communique 61")
-    num_match = re.search(r'(?:Communique|No\.?|No\s*:|Last Communique)\s*(\d+(?:\s*\(?Revised\)?|\s*Rev)?)', header_text, re.IGNORECASE)
+    # 1. Communique Number (Handles "Communique No. 22", "No: 64", "Communique - 7", "Last Communique 61")
+    num_match = re.search(r'(?:Communique|No\.?|No\s*[:\-]|Comm\.)\s*[\-\–]?\s*(\d+(?:\s*\(?Revised\)?|\s*Rev)?)', header_text, re.IGNORECASE)
     if num_match:
         data['number'] = num_match.group(1).strip()
         
@@ -55,12 +55,10 @@ def classify_communique(header_text):
         
     if data['gender'] != 'Unknown' and data['age_group'] != 'Unknown':
         data['category'] = f"{data['gender']} {data['age_group']}"
-    # Fallback: if gender is known but age group is missing, sometimes "Elite" is just implied in the title
     elif data['gender'] != 'Unknown':
          data['category'] = f"{data['gender']} (Implied)"
         
     # 5. Race Type & Layout Family
-    # We must check multi-word races first (Team Sprint) before single words (Sprint)
     for race_key in sorted(LAYOUT_MAPPING.keys(), key=lambda k: (k != 'Omnium', -len(k))):
         if re.search(r'\b' + re.escape(race_key) + r'\b', header_text, re.IGNORECASE):
             data['race_type'] = race_key

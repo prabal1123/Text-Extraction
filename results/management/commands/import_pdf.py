@@ -3,10 +3,12 @@ import re
 from django.core.management.base import BaseCommand
 from django.db import transaction
 
+from pipeline.segmenter import segment_pdf
+from pipeline.classifier import classify_communique
 from pipeline.parsers import extract_status
 from pipeline.quality import (normalize_dob, parse_rows, parse_team_blocks,
                               parse_time_to_ms, total_points)
-from results.models import (Championship, PointsDetail, Race, Result, Rider,
+from results.models import (Championship, Communique, PointsDetail, Race, Result, Rider,
                             Team, TeamMember)
 
 FAMILIES = ["timed", "placing", "team", "points"]
@@ -45,7 +47,7 @@ def status_cells(row):
 
 
 class Command(BaseCommand):
-    help = "Parse cached PDFs into Result rows (per championship, in a transaction)."
+    help = "Parse cached PDFs into Result rows with event splitting and coordinate cropping."
 
     def add_arguments(self, parser):
         parser.add_argument("--edition", type=int, nargs="*", help="Only these editions")
@@ -58,11 +60,10 @@ class Command(BaseCommand):
         for champ in champs:
             self.import_championship(champ, totals)
         self.stdout.write(self.style.SUCCESS(
-            f"\nPhase 5 Complete! Inserted {totals['results']} Result rows, "
+            f"\nPhase 2 Event Splitting Import Complete! Inserted {totals['results']} Result rows, "
             f"{totals['members']} TeamMember rows, and {totals['points']} PointsDetail rows. "
             f"Skipped {totals['skipped']} races (superseded or duplicate)."))
 
-    # ------------------------------------------------------------------
     @staticmethod
     def find_superseded(races):
         groups = {}
@@ -79,53 +80,115 @@ class Command(BaseCommand):
         return superseded
 
     def import_championship(self, champ, totals):
-        races = list(Race.objects.filter(communique__championship=champ, layout_family__in=FAMILIES)
-                     .select_related("communique").order_by("id"))
-        if not races:
-            return
         pdf_path = f".cache/pdfs/{champ.pdf_hash}.pdf"
         if not os.path.exists(pdf_path):
             self.stdout.write(self.style.WARNING(
                 f"\n{champ.edition}th: cached PDF missing, skipped (existing results kept)."))
             return
-        self.stdout.write(self.style.SUCCESS(
-            f"\nParsing {len(races)} supported races for {champ.edition}th Edition..."))
-        superseded = self.find_superseded(races)
-        seen_sigs, seen_numbers = {}, {}
-        with transaction.atomic():
-            Result.objects.filter(race__communique__championship=champ).delete()
-            for race in races:
-                self.import_race(race, pdf_path, superseded, seen_sigs, seen_numbers, totals)
 
-    # ------------------------------------------------------------------
+        self.stdout.write(self.style.SUCCESS(
+            f"\nSegmenting and classifying PDF for {champ.edition}th Edition..."))
+
+        # Re-segment PDF into individual events with crop bounds
+        segments = segment_pdf(pdf_path)
+
+        with transaction.atomic():
+            # Clear previous results and communiques/races for this championship to rebuild cleanly
+            Result.objects.filter(race__communique__championship=champ).delete()
+            Race.objects.filter(communique__championship=champ).delete()
+            Communique.objects.filter(championship=champ).delete()
+
+            created_races_count = 0
+            seen_sigs, seen_numbers = {}, {}
+
+            for seg in segments:
+                header_text = seg['header_text']
+                full_text = seg['full_text']
+                pages = seg['pages']
+                page_range = f"{pages[0]}-{pages[-1]}" if len(pages) > 1 else str(pages[0])
+                
+                # Classify communique metadata
+                class_info = classify_communique(header_text + "\n" + full_text)
+                comm_num = int(class_info['number']) if class_info['number'] and str(class_info['number']).isdigit() else None
+
+                comm_obj = Communique.objects.create(
+                    championship=champ,
+                    number=comm_num,
+                    page_range=page_range,
+                    y_top=seg['y_top'],
+                    y_bottom=seg['y_bottom'],
+                    event_index=seg['event_index'],
+                    raw_header_text=header_text
+                )
+
+                layout_family = class_info['layout_family']
+                if layout_family == 'unknown':
+                    text_lower = full_text.lower()
+                    if 'team sprint' in text_lower or 'team pursuit' in text_lower:
+                        layout_family = 'team'
+                    elif 'points race' in text_lower or 'madison' in text_lower or 'omnium' in text_lower:
+                        layout_family = 'points'
+                    elif any(w in text_lower for w in ['time trial', 'pursuit', 'start no', 'time']):
+                        layout_family = 'timed'
+                    elif any(w in text_lower for w in ['sprint', 'keirin', 'scratch', 'elimination', 'rank']):
+                        layout_family = 'placing'
+
+                if layout_family not in FAMILIES:
+                    continue
+
+                race_obj, _ = Race.objects.get_or_create(
+                    communique=comm_obj,
+                    defaults={
+                        'category': class_info['category'] if class_info['category'] != 'Unknown' else 'Elite / Junior',
+                        'race_type': class_info['race_type'] if class_info['race_type'] != 'Unknown' else 'Extracted Race',
+                        'gender': class_info['gender'] if class_info['gender'] != 'Unknown' else 'Men/Women',
+                        'stage': class_info['stage'],
+                        'layout_family': layout_family
+                    }
+                )
+
+                # Import results for this segmented race using crop bounds
+                self.import_race(race_obj, pdf_path, set(), seen_sigs, seen_numbers, totals)
+                created_races_count += 1
+
+        self.stdout.write(self.style.SUCCESS(f"Successfully processed {created_races_count} segmented events for {champ.edition}th Edition."))
+
     def import_race(self, race, pdf_path, superseded, seen_sigs, seen_numbers, totals):
         comm = race.communique
-        label = f"Comm {comm.number or 'None'} (pg {comm.page_range})"
+        label = f"Comm {comm.number or 'None'} (pg {comm.page_range}, ev {comm.event_index})"
         if race.id in superseded:
             totals["skipped"] += 1
             self.stdout.write(f"  -> {label}: SKIPPED, superseded by a revised communique")
             return
+
         pages = [int(p) for p in comm.page_range.split("-")]
         if len(pages) == 2:
             pages = list(range(pages[0], pages[1] + 1))
+
+        y_top = comm.y_top
+        y_bottom = comm.y_bottom
         is_team = race.layout_family == "team"
         info = {}
+
         if is_team:
-            items = parse_team_blocks(pdf_path, pages)
+            items = parse_team_blocks(pdf_path, pages, y_top, y_bottom)
             sig = ("T",) + tuple(sorted((b["rank"], b["team"], len(b["members"])) for b in items))
         else:
-            items, info = parse_rows(pdf_path, pages, race.layout_family, race.race_type)
+            items, info = parse_rows(pdf_path, pages, race.layout_family, race.race_type, y_top, y_bottom)
             sig = ("R",) + tuple(sorted(
                 (first_val(r, "rank"), first_val(r, "bib"), r.get("name") or "") for r in items))
+
         if not items:
             self.stdout.write(f"  -> {label}: 0 results ({race.layout_family})")
             return
+
         sig_key = (race.race_type, race.category, race.stage or "", sig)
         if sig_key in seen_sigs:
             totals["skipped"] += 1
             self.stdout.write(f"  -> {label}: SKIPPED, identical content to {seen_sigs[sig_key]}")
             return
         seen_sigs[sig_key] = label
+
         extra_flag = ""
         base = base_number(comm.number)
         if base:
@@ -134,6 +197,7 @@ class Command(BaseCommand):
                 extra_flag = f"Communique number {base} reused with different content (see {seen_numbers[nk]})"
             else:
                 seen_numbers[nk] = label
+
         if is_team:
             r, m, p = self.save_team_blocks(race, items, extra_flag)
             self.stdout.write(f"  -> {label}: {r} teams, {m} riders (Team)")
@@ -147,11 +211,11 @@ class Command(BaseCommand):
             if extra_flag:
                 tags += " [number reused]"
             self.stdout.write(f"  -> {label}: {r} results ({race.layout_family}){tags}")
+
         totals["results"] += r
         totals["members"] += m
         totals["points"] += p
 
-    # ------------------------------------------------------------------
     def get_rider(self, race, name, raw_dob, flags):
         dob, ok = normalize_dob(raw_dob)
         if not ok:

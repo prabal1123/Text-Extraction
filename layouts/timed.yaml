@@ -1,9 +1,8 @@
 columns:
-  rank: [Rank, Position, Pos, Pos., Place]
-  bib: [Start No., Rider No., Bib No., Start No, Bib, art No., der No., art No, der
-      No]
+  rank: [Rank, Position, Pos, Pos., Place, S. No., S.No.]
+  bib: [Start No., Rider No., Bib No., Start No, Bib, art No., der No., art No, der No]
   name: [Name, Name of the Cyclist, Name of Cyclist, Name of Rider]
   dob: [DOB, D.O.B]
   team: [State, Team, State/Team, Unit/State]
-  time: [Time]
+  time: [Time, Timing]
   speed: ['@speed', Speed Km/hr, Remarks, Speed, Spe, ed, eed]

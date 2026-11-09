@@ -49,9 +49,63 @@ def extract_status(values):
     return 'OK'
 
 
+# --- Column Voting & Role Inference for Family B/C ---
+_DOB_CELL_RE = re.compile(r'^\d{1,2}[./-](?:\d{1,2}|[A-Za-z]{3})[./-]\d{2,4}$')
+_TIME_CELL_RE = re.compile(r'^(?:(\d{1,2}):)?(\d{1,2})\.(\d{3})$')
+_SPEED_CELL_RE = re.compile(r'^\d{1,3}\.\d{2,3}$')
+_RANK_CELL_RE = re.compile(r'^(?:[1-9]\d*|[I|V|X]+|Gold|Silver|Bronze|\d+(?:st|nd|rd|th))$', re.I)
+_BIB_CELL_RE = re.compile(r'^\*?\d{1,4}$')
+
+def infer_column_roles_by_voting(cleaned_table):
+    """Votes on column roles across table rows based on content patterns."""
+    if not cleaned_table or len(cleaned_table) < 2:
+        return None
+        
+    ncols = max(len(row) for row in cleaned_table)
+    col_votes = [{} for _ in range(ncols)]
+    
+    for row in cleaned_table:
+        for col_idx, cell in enumerate(row):
+            val = cell.strip()
+            if not val:
+                continue
+            if _DOB_CELL_RE.match(val):
+                col_votes[col_idx]['dob'] = col_votes[col_idx].get('dob', 0) + 1
+            elif _TIME_CELL_RE.match(val):
+                col_votes[col_idx]['time'] = col_votes[col_idx].get('time', 0) + 1
+            elif _SPEED_CELL_RE.match(val):
+                col_votes[col_idx]['speed'] = col_votes[col_idx].get('speed', 0) + 1
+            elif _RANK_CELL_RE.match(val):
+                col_votes[col_idx]['rank'] = col_votes[col_idx].get('rank', 0) + 1
+            elif _BIB_CELL_RE.match(val):
+                col_votes[col_idx]['bib'] = col_votes[col_idx].get('bib', 0) + 1
+            elif len(val) >= 3 and not val.isdigit():
+                col_votes[col_idx]['name_or_team'] = col_votes[col_idx].get('name_or_team', 0) + 1
+
+    inferred_headers = [None] * ncols
+    assigned_roles = set()
+    
+    for col_idx, votes in enumerate(col_votes):
+        if not votes:
+            continue
+        best_role = max(votes, key=votes.get)
+        if best_role not in assigned_roles and best_role != 'name_or_team':
+            inferred_headers[col_idx] = best_role
+            assigned_roles.add(best_role)
+            
+    for col_idx, h in enumerate(inferred_headers):
+        if h is None:
+            if 'bib' in assigned_roles and 'name' not in assigned_roles:
+                inferred_headers[col_idx] = 'name'
+                assigned_roles.add('name')
+            elif 'name' in assigned_roles and 'team' not in assigned_roles:
+                inferred_headers[col_idx] = 'team'
+                assigned_roles.add('team')
+                
+    return inferred_headers
+
+
 def _split_merged_header(cell, ncols, config):
-    """Header text jammed into one cell ('Rank Start No. Name ...'): find the
-    column aliases in order. Only accepted if the count equals the column count."""
     text = re.sub(r'\s+', ' ', str(cell).lower())
     cands = []
     for canon, aliases in config['columns'].items():
@@ -59,7 +113,7 @@ def _split_merged_header(cell, ncols, config):
             a_clean = re.sub(r'\s+', ' ', str(a).lower()).strip()
             if a_clean:
                 cands.append((a_clean, canon))
-    cands.sort(key=lambda t: -len(t[0]))      # longest alias first
+    cands.sort(key=lambda t: -len(t[0]))
     taken = [False] * len(text)
     found = []
     for a, canon in cands:
@@ -83,7 +137,6 @@ def _split_merged_header(cell, ncols, config):
 
 
 def _as_header(row_clean, config):
-    """Return (mapped, labels) if this row is a header row, else None."""
     nonempty = [c for c in row_clean if c]
     if len(nonempty) == 1 and len(row_clean) >= 3:
         res = _split_merged_header(nonempty[0], len(row_clean), config)
@@ -97,7 +150,6 @@ def _as_header(row_clean, config):
 
 
 def _merge_headers(parts):
-    """Combine stacked header rows column by column."""
     ncols = max(len(m) for m, _ in parts)
     mapped = [None] * ncols
     labels = [''] * ncols
@@ -126,19 +178,7 @@ def _merge_headers(parts):
     return out
 
 
-def _label_trailing_points(active, config):
-    """Sheets whose last four unlabelled columns before '@speed' are
-    FO, +Lap, -Lap, Total Points (74th Points Race)."""
-    if ('points' in config['columns'] and 'points' not in active and len(active) >= 9
-            and active[-1] == 'x_speed'
-            and all(n.startswith('sprint_') for n in active[-5:-1])):
-        active[-5:-1] = ['finish_order', 'lap', 'lap_2', 'points']
-    return active
-
-
 def process_table(table, config, headers=None):
-    """Returns (rows, headers_used). The table's own header row(s) always win;
-    `headers` from an earlier page is only a fallback for headerless tables."""
     if not table:
         return [], headers
 
@@ -156,16 +196,22 @@ def process_table(table, config, headers=None):
             parts.append(h)
             start = idx + 1
         elif parts:
-            break                      # header block ended
+            break
+            
     active = _merge_headers(parts) if parts else headers
-    if parts and active:
-        active = _label_trailing_points(active, config)
+    
+    # Trigger voting fallback if header is unrecognised or missing
+    if active is None:
+        active = infer_column_roles_by_voting(cleaned)
+        start = 0  # no header row to skip
+
     if active is None:
         return [], headers
 
     data_rows = []
+    last_time = ""
     for r in cleaned[start:]:
-        if _as_header(r, config):      # repeated header row inside the table
+        if parts and _as_header(r, config):
             continue
         row_dict = {}
         row_sprints = []
@@ -173,27 +219,41 @@ def process_table(table, config, headers=None):
             val = r[i] if i < len(r) else ''
             if not h:
                 continue
+            # Handle ditto marks in time column ("-- do --" means same time as above)
+            if h == 'time' and ('do' in val.lower() or '---' in val):
+                val = last_time
+            elif h == 'time' and val:
+                last_time = val
+                
+            # Strip trailing tokens like Gold/Silver/Bronze/NR from team or time
+            if h in ('team', 'time') and val:
+                val = re.sub(r'\b(Gold|Silver|Bronze|NR|\+1\s*Lap|Sec\.?)\b', '', val, flags=re.I).strip()
+
             if h.startswith('sprint_'):
-                row_sprints.append(val)    # keep blanks: position = sprint number
+                row_sprints.append(val)
             else:
                 row_dict[h] = val
+                
         if 'name' in active and not re.search(r'[A-Za-z]', row_dict.get('name', '')):
-            continue                   # e.g. a plain table of bib numbers
+            continue
         if row_dict.get('bib') or row_dict.get('name'):
             row_dict['_sprints'] = row_sprints
             data_rows.append(row_dict)
     return data_rows, active
 
 
-def parse_pdf_tables(pdf_path, pages, layout_family):
+def parse_pdf_tables(pdf_path, pages, layout_family, y_top=None, y_bottom=None):
     config = load_config(layout_family)
-    if not config:
-        return []
     data_rows = []
-    headers = None  # carried across pages of the same communique
+    headers = None
     with pdfplumber.open(pdf_path) as pdf:
         for p_num in pages:
             page = pdf.pages[p_num - 1]
+            if y_top is not None or y_bottom is not None:
+                yt = y_top if y_top is not None else 0
+                yb = y_bottom if y_bottom is not None else page.height
+                page = page.crop((0, yt, page.width, yb))
+            
             page_rows = []
             for table in page.extract_tables():
                 rows, headers = process_table(table, config, headers)
@@ -211,8 +271,6 @@ _TIME_RE = re.compile(r'(\d{1,2}:\d{2}\.\d{3}|\d{2,3}\.\d{3})')
 _SPEED_RE = re.compile(r'(?<![\d:.])(\d{1,3}\.\d{2,3}|#DIV/0!)(?!\d)')
 
 def split_time_speed(text):
-    """Return (time_str, speed_str, remainder). The time is removed first so
-    the speed pattern can't match inside it."""
     time_m = _TIME_RE.search(text)
     time_str = time_m.group(1) if time_m else ""
     rest = text.replace(time_str, " ", 1) if time_str else text
@@ -223,11 +281,15 @@ def split_time_speed(text):
     return time_str, speed_str, rest
 
 
-def parse_team_events(pdf_path, pages):
+def parse_team_events(pdf_path, pages, y_top=None, y_bottom=None):
     data_rows = []
     with pdfplumber.open(pdf_path) as pdf:
         for p_num in pages:
             page = pdf.pages[p_num - 1]
+            if y_top is not None or y_bottom is not None:
+                yt = y_top if y_top is not None else 0
+                yb = y_bottom if y_bottom is not None else page.height
+                page = page.crop((0, yt, page.width, yb))
             words = page.extract_words()
             lines_dict = {}
             for w in words:

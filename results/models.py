@@ -25,6 +25,10 @@ class Communique(models.Model):
     number = models.CharField(max_length=50, blank=True, null=True)
     page_range = models.CharField(max_length=50)
     race_date = models.CharField(max_length=100, blank=True, null=True) # Storing as string for now due to varied formats
+    
+    y_top = models.FloatField(null=True, blank=True)
+    y_bottom = models.FloatField(null=True, blank=True)
+    event_index = models.IntegerField(default=0)
     raw_header_text = models.TextField()
 
     def __str__(self):
